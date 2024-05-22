@@ -45,6 +45,11 @@ Then there is this:
 -> [Android](https://docs.beeware.org/en/latest/tutorial/tutorial-5/android.html)
 -> [iOS](https://docs.beeware.org/en/latest/tutorial/tutorial-5/iOS.html)
 
+## [Step 6](https://docs.beeware.org/en/latest/tutorial/tutorial-6.html)
+
+Easy to go to web too!
+And without any other steps, you can call `briefcase run web`!
+
 
 ## Interesting / Curious Stuff
 
