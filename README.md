@@ -50,6 +50,17 @@ Then there is this:
 Easy to go to web too!
 And without any other steps, you can call `briefcase run web`!
 
+## [Step 7](https://docs.beeware.org/en/latest/tutorial/tutorial-7.html)
+
+Add requirement in development:
+- `python -m pip install httpx`
+- `briefcase dev`
+
+Add requirement for builds:
+- pyproject.toml > `[tool.briefcase.app.helloworld]` > `requires = []` > add pip installable package name
+- `briefcase update -r` (update with new requirements), `build`, `run`
+
+Ran into unreliably reproducible issue mentioned in this thread: [beeware/briefcase - Discussion 1404](https://github.com/beeware/briefcase/discussions/1404); contributed.
 
 ## Interesting / Curious Stuff
 

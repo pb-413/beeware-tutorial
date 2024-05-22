@@ -2,6 +2,8 @@
 My first beeware application
 """
 
+import httpx
+
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
@@ -47,9 +49,14 @@ class HelloWorld(toga.App):
         self.main_window.show()
 
     def say_hello(self, widget):
+        with httpx.Client() as client:
+            response = client.get("https://jsonplaceholder.typicode.com/posts/42")
+
+        payload = response.json()
+
         self.main_window.info_dialog(
             greeting(self.name_input.value),
-            "Hi there!",
+            payload['body'],
         )
 
 
