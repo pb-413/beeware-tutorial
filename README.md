@@ -62,6 +62,12 @@ Add requirement for builds:
 
 Ran into unreliably reproducible issue mentioned in this thread: [beeware/briefcase - Discussion 1404](https://github.com/beeware/briefcase/discussions/1404); contributed.
 
+## [Step 8](https://docs.beeware.org/en/latest/tutorial/tutorial-8.html)
+`def` -> `async def`
+`httpx.Client()` -> `httpx.AsyncClient()`
+`with` (context manager) -> `async with`
+`client.get(...)` -> `await client.get(...)` (release to system)
+
 ## Interesting / Curious Stuff
 
 (!) installing a new build msi results in the application appearing twice in the Apps > Installed apps list.
