@@ -36,3 +36,6 @@ Then there is this:
 
 - To test, I ran `package` and installed the app over my existing version that I installed (old, no popup).
  - That produced the expected result!
+
+`briefcase run [-u/--update]` to troubleshoot/iterate the built version quickly.
+`briefcase package -u` to make a change to the app before re-packaging.
