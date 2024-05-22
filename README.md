@@ -39,3 +39,39 @@ Then there is this:
 
 `briefcase run [-u/--update]` to troubleshoot/iterate the built version quickly.
 `briefcase package -u` to make a change to the app before re-packaging.
+
+## [Step 5](https://docs.beeware.org/en/latest/tutorial/tutorial-5/index.html)
+
+-> [Android](https://docs.beeware.org/en/latest/tutorial/tutorial-5/android.html)
+-> [iOS](https://docs.beeware.org/en/latest/tutorial/tutorial-5/iOS.html)
+
+
+## Interesting / Curious Stuff
+
+(!) installing a new build msi results in the application appearing twice in the Apps > Installed apps list.
+
+
+## Issues and Solutions
+
+Ran out of hard drive space while `[android_sdk] Downloading the 'system-images;android-31;default;x86_64' Android system image...`
+-> Found similar error on [beeware/briefcase - issue 1388](https://github.com/beeware/briefcase/issues/1338); mentioned that the steps there helped me
+
+Ran into another error about storage space :(
+```
+[android_sdk] Emulator output log for startup failure
+INFO    | Storing crashdata in: C:\Users\patby\AppData\Local\Temp\\AndroidEmulator\emu-crash-34.2.14.db, detection is enabled for process: 21232
+INFO    | Android emulator version 34.2.14.0 (build_id 11834374) (CL:N/A)
+INFO    | Found systemPath C:\Users\patby\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk\system-images\android-31\default\x86_64\
+WARNING | Please update the emulator to one that supports the feature(s): Vulkan
+WARNING | Failed to process .ini file C:\Users\patby\.android\avd\..\avd\beePhone.avd\quickbootChoice.ini for reading.
+ERROR   | Not enough space to create userdata partition. Available: 5655.476562 MB at C:\Users\patby\.android\avd\..\avd\beePhone.avd, need 7372.800000 MB.
+INFO    | Storing crashdata in: C:\Users\patby\AppData\Local\Temp\\AndroidEmulator\emu-crash-34.2.14.db, detection is enabled for process: 8404
+INFO    | Duplicate loglines will be removed, if you wish to see each individual line launch with the -log-nofilter flag.
+INFO    | Increasing RAM size to 2048MB
+```
+-> Found similar issue on [stack](https://stackoverflow.com/questions/53931877/emulator-emulator-error-not-enough-space-to-create-userdata-partition) with possible solution to bring emulation to D:\ drive which I have.
+ -> That didn't work
+ -> Moved things back around
+-> Moved the BeeWare Cache to my D:\ drive via [env var config](https://briefcase.readthedocs.io/en/stable/reference/environment.html)
+ -> Deleted more files (~5-6GiB temp)
+ -> Booted!
