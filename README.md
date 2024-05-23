@@ -80,6 +80,10 @@ As built app:
 
 Run into issues with the building / "Setting stub app details" step again and return to [beeware/briefcase - Discussion 1404](https://github.com/beeware/briefcase/discussions/1404). Couldn't even get past here by snoozing McAfee Real Time Scanning!
 
+### [Step 10](https://docs.beeware.org/en/latest/tutorial/tutorial-10.html)
+
+Did what I can; still blocked by 1404.
+
 ## Interesting / Curious Stuff
 
 (!) installing a new build msi results in the application appearing twice in the Apps > Installed apps list.
