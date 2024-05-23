@@ -1,14 +1,16 @@
 # beeware-tutorial
 
+## Tutorial Walkthrough
+
 Following [this tutorial](https://docs.beeware.org/en/latest/index.html).
 
-## [Step 0](https://docs.beeware.org/en/latest/tutorial/tutorial-0.html)
+### [Step 0](https://docs.beeware.org/en/latest/tutorial/tutorial-0.html)
 
-## [Step 1](https://docs.beeware.org/en/latest/tutorial/tutorial-1.html)
+### [Step 1](https://docs.beeware.org/en/latest/tutorial/tutorial-1.html)
 
-## [Step 2](https://docs.beeware.org/en/latest/tutorial/tutorial-2.html)
+### [Step 2](https://docs.beeware.org/en/latest/tutorial/tutorial-2.html)
 
-## [Step 3](https://docs.beeware.org/en/latest/tutorial/tutorial-3.html)
+### [Step 3](https://docs.beeware.org/en/latest/tutorial/tutorial-3.html)
 Didn't include any code changes, so taking a not here.
 
 `briefcase create` creates application scaffolding to support the packaging process.
@@ -24,7 +26,7 @@ Didn't include any code changes, so taking a not here.
 
 `briefcase package` will turn that into an msi.
 
-## [Step 4]()
+### [Step 4](https://docs.beeware.org/en/latest/tutorial/tutorial-4.html)
 `briefcase dev` runs your code as is.
 `briefcase run` runs your built app, so it needs updated.
 `briefcase update` will do that so that we don't have to start from scratch or manually delete anything.
@@ -40,17 +42,17 @@ Then there is this:
 `briefcase run [-u/--update]` to troubleshoot/iterate the built version quickly.
 `briefcase package -u` to make a change to the app before re-packaging.
 
-## [Step 5](https://docs.beeware.org/en/latest/tutorial/tutorial-5/index.html)
+### [Step 5](https://docs.beeware.org/en/latest/tutorial/tutorial-5/index.html)
 
 -> [Android](https://docs.beeware.org/en/latest/tutorial/tutorial-5/android.html)
 -> [iOS](https://docs.beeware.org/en/latest/tutorial/tutorial-5/iOS.html)
 
-## [Step 6](https://docs.beeware.org/en/latest/tutorial/tutorial-6.html)
+### [Step 6](https://docs.beeware.org/en/latest/tutorial/tutorial-6.html)
 
 Easy to go to web too!
 And without any other steps, you can call `briefcase run web`!
 
-## [Step 7](https://docs.beeware.org/en/latest/tutorial/tutorial-7.html)
+### [Step 7](https://docs.beeware.org/en/latest/tutorial/tutorial-7.html)
 
 Add requirement in development:
 - `python -m pip install httpx`
@@ -62,11 +64,21 @@ Add requirement for builds:
 
 Ran into unreliably reproducible issue mentioned in this thread: [beeware/briefcase - Discussion 1404](https://github.com/beeware/briefcase/discussions/1404); contributed.
 
-## [Step 8](https://docs.beeware.org/en/latest/tutorial/tutorial-8.html)
+### [Step 8](https://docs.beeware.org/en/latest/tutorial/tutorial-8.html)
 `def` -> `async def`
 `httpx.Client()` -> `httpx.AsyncClient()`
 `with` (context manager) -> `async with`
 `client.get(...)` -> `await client.get(...)` (release to system)
+
+### [Step 9](https://docs.beeware.org/en/latest/tutorial/tutorial-9.html)
+As dev:
+`briefcase dev --test -r` to test, with test requirements (`-r`), via `pytest`.
+`briefcase dev --test` if no new test requirements need installed.
+
+As built app:
+`briefcase run --test -r`
+
+Run into issues with the building / "Setting stub app details" step again and return to [beeware/briefcase - Discussion 1404](https://github.com/beeware/briefcase/discussions/1404).
 
 ## Interesting / Curious Stuff
 
