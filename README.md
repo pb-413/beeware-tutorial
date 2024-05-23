@@ -78,7 +78,7 @@ As dev:
 As built app:
 `briefcase run --test -r`
 
-Run into issues with the building / "Setting stub app details" step again and return to [beeware/briefcase - Discussion 1404](https://github.com/beeware/briefcase/discussions/1404).
+Run into issues with the building / "Setting stub app details" step again and return to [beeware/briefcase - Discussion 1404](https://github.com/beeware/briefcase/discussions/1404). Couldn't even get past here by snoozing McAfee Real Time Scanning!
 
 ## Interesting / Curious Stuff
 
